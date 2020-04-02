@@ -1,5 +1,5 @@
 var data = {
-    serviceKey: 'Cubt5vsvLXW2jUIij3GoQkPkrn9MEjJ3bmstr55qXEiUwu3Sevo5t1Nm4arId0zY1BSotjFmf8C%2FZM8Gpeg42Q%3D%3D',
+    serviceKey: 'I%2Bu5yBZvAbz%2FgetqfPM1BQ%2FEShTpdA%2FCmaJOCUCSzvtSfbvPtETYt57IJ54u%2FmsQZRRQOLY12xGLJ1R4qHppJg%3D%3D',
     s_page: 0,
     s_list: 1,
     type: 'json'
@@ -14,7 +14,7 @@ $.ajax({
          console.log(data);
     }
 });
-// const API_KEY = "Cubt5vsvLXW2jUIij3GoQkPkrn9MEjJ3bmstr55qXEiUwu3Sevo5t1Nm4arId0zY1BSotjFmf8C%2FZM8Gpeg42Q%3D%3D";
+// const API_KEY = "I%2Bu5yBZvAbz%2FgetqfPM1BQ%2FEShTpdA%2FCmaJOCUCSzvtSfbvPtETYt57IJ54u%2FmsQZRRQOLY12xGLJ1R4qHppJg%3D%3D";
 
 // function getData(){
 //     fetch(
