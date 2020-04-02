@@ -28,5 +28,6 @@
 
 // getData();
 
-const myData = JSON.parse(data)
-console.log(myData[0].pageNo);
+var myxmlDoc= new ActiveXObject("Microsoft.XMLDOM");
+myxmlDoc.async = "false";
+console.log(myxmlDoc.load("저눅어린이보호구역표준데이터.xml"));
