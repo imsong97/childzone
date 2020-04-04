@@ -1,4 +1,4 @@
-const currentLat, currentLon;
+let currentLat, currentLon;
 const inputData = document.getElementById("adress"),
     btnSearch = document.getElementById("search");
 
@@ -29,5 +29,7 @@ function init(){
     
     getMap(currentLat, currentLon);
 }
+
+init();
 
 
