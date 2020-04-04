@@ -25,9 +25,9 @@ function init(){
     navigator.geolocation.getCurrentPosition(function(position) { //현재위치
         currentLat = position.coords.latitude; // 위도
         currentLon = position.coords.longitude; // 경도
+        
+        getMap(currentLat, currentLon);
     });
-    console.log(currentLat, currentLon);
-    getMap(currentLat, currentLon);
 }
 
 init();
