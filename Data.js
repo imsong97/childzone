@@ -13,8 +13,6 @@
 //     }
 // });
 
-//const API_KEY = "I%2Bu5yBZvAbz%2FgetqfPM1BQ%2FEShTpdA%2FCmaJOCUCSzvtSfbvPtETYt57IJ54u%2FmsQZRRQOLY12xGLJ1R4qHppJg%3D%3D";
-
 function getData(){
     fetch(
         //`http://api.data.go.kr/openapi/child-prtc-zn-std?ServiceKey=${API_KEY}`
@@ -22,7 +20,7 @@ function getData(){
     ).then(function(response){
         return response.json()
     }).then(function(json){
-        console.log(json);
+        console.log(json.institutionNm);
     })
 }
 
