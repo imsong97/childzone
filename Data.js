@@ -16,7 +16,7 @@
 function getData(){
     fetch(
         //`http://api.data.go.kr/openapi/child-prtc-zn-std?ServiceKey=${API_KEY}`
-        "전국어린이보호구역표준데이터.xml"
+        "전국어린이보호구역표준데이터.json"
     ).then(function(response){
         return response.json()
     }).then(function(json){
