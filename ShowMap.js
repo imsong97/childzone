@@ -26,7 +26,7 @@ function init(){
         currentLat = position.coords.latitude; // 위도
         currentLon = position.coords.longitude; // 경도
     });
-    
+    console.log(currentLat, currentLon);
     getMap(currentLat, currentLon);
 }
 
