@@ -7,23 +7,7 @@ function getMap(currentLat, currentLon){
         center: new kakao.maps.LatLng(currentLat, currentLon),
         level: 3
     };
-    var map = new kakao.maps.Map(container, options);
 
-    //마커 표시
-    var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-    marker.setMap(map);
-
-    //지도타입
-    var mapTypeControl = new kakao.maps.MapTypeControl();
-    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-
-    //지도 확대축소
-    var zoomControl = new kakao.maps.ZoomControl();
-    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT); 
-    
     // 마커 클러스터러를 생성합니다 
     const clusterer = new kakao.maps.MarkerClusterer({
         map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
@@ -46,6 +30,25 @@ function getMap(currentLat, currentLon){
         // 클러스터러에 마커들을 추가합니다
         clusterer.addMarkers(markers);
     });
+    
+    var map = new kakao.maps.Map(container, options);
+
+    //마커 표시
+    var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    marker.setMap(map);
+
+    //지도타입
+    var mapTypeControl = new kakao.maps.MapTypeControl();
+    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+    //지도 확대축소
+    var zoomControl = new kakao.maps.ZoomControl();
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT); 
+
+    
 }
 
 function init(){
