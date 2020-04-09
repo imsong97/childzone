@@ -4,7 +4,7 @@ function getData(){
     ).then(function(response){
         return response.json()
     }).then(function(json){
-        console.log(json[0].latitude)
+        console.log(latitude)
     })
 }
 
