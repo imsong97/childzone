@@ -2,11 +2,7 @@ const inputData = document.getElementById("adress"),
     btnSearch = document.getElementById("search");
 
 function getMap(currentLat, currentLon){
-    // var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    // mapOption = { 
-    //     center: new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표
-    //     level: 3 // 지도의 초기 확대 레벨
-    // };
+    
     var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div 
         center : new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표 
         level : 3 // 지도의 확대 레벨 
@@ -20,7 +16,7 @@ function getMap(currentLat, currentLon){
     });
 
     // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
-    $.get("/data2.json", function(data) { // 데이터에서 좌표 값을 가지고 마커를 표시합니다
+    $.get("https://apis.map.kakao.com/download/web/data/chicken.json", function(data) { // 데이터에서 좌표 값을 가지고 마커를 표시합니다
 
         var markers = $(data.position).map(function(i, position) {
             return new kakao.maps.Marker({
@@ -31,8 +27,6 @@ function getMap(currentLat, currentLon){
         // 클러스터러에 마커들을 추가합니다
         clusterer.addMarkers(markers);
     });
-
-    
 
     //마커 표시
     var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
