@@ -2,11 +2,13 @@ const inputData = document.getElementById("adress"),
     btnSearch = document.getElementById("search");
 
 function getMap(currentLat, currentLon){
-    var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div
-        center : new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표 
-        level : 3 // 지도의 확대 레벨 
-    });
-    // var map = new kakao.maps.Map(container, options);
+    var container = document.getElementById('map'), // 지도를 표시할 div 
+    options = { 
+        center: new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(container, options);
 
     //마커 표시
     var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
