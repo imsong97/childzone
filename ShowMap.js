@@ -2,11 +2,10 @@ const inputData = document.getElementById("adress"),
     btnSearch = document.getElementById("search");
 
 function getMap(currentLat, currentLon){
-    var container = document.getElementById('map');
-    var options = {
-        center: new kakao.maps.LatLng(currentLat, currentLon),
-        level: 3
-    };
+    var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div
+        center : new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표 
+        level : 3 // 지도의 확대 레벨 
+    });
 
     // // 마커 클러스터러를 생성합니다 
     const clusterer = new kakao.maps.MarkerClusterer({
@@ -31,7 +30,7 @@ function getMap(currentLat, currentLon){
         clusterer.addMarkers(markers);
     });
 
-    var map = new kakao.maps.Map(container, options);
+    //var map = new kakao.maps.Map(container, options);
 
     //마커 표시
     var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
