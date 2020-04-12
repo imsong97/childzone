@@ -2,11 +2,15 @@ const inputData = document.getElementById("adress"),
     btnSearch = document.getElementById("search");
 
 function getMap(currentLat, currentLon){
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표
-        level: 3 // 지도의 초기 확대 레벨
-    };
+    // var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    // mapOption = { 
+    //     center: new kakao.maps.LatLng(currentLat, currentLon), // 지도의 중심좌표
+    //     level: 3 // 지도의 초기 확대 레벨
+    // };
+    var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div 
+        center : new kakao.maps.LatLng(37.376758, 126.788062), // 지도의 중심좌표 
+        level : 3 // 지도의 확대 레벨 
+    });
 
     // // 마커 클러스터러를 생성합니다 
     const clusterer = new kakao.maps.MarkerClusterer({
@@ -28,8 +32,7 @@ function getMap(currentLat, currentLon){
         clusterer.addMarkers(markers);
     });
 
-    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-    var map = new kakao.maps.Map(mapContainer, mapOption); 
+    
 
     //마커 표시
     var markerPosition  = new kakao.maps.LatLng(currentLat, currentLon); 
