@@ -1,6 +1,3 @@
-const inputData = document.getElementById("adress"),
-    btnSearch = document.getElementById("search");
-
 function getMap(currentLat, currentLon){
     
     var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div 
