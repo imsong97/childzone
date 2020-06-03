@@ -15,7 +15,8 @@
 }
   
 .searchButton {
-    width: 10%;
+    width: 40%;
+    max-width: 150px;
     height: 36px;
     border: 1px solid #00B4CC;
     background: #00B4CC;
