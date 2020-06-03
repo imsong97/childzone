@@ -32,6 +32,7 @@ function getMap(currentLat, currentLon){
 }
 
 let map = getMap();
+console.log(map);
 
 // 마커 클러스터러를 생성합니다 
 const clusterer = new kakao.maps.MarkerClusterer({
