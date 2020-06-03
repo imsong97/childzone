@@ -70,3 +70,7 @@
     width: 30px;
     height: 27.262px;
 }
+
+.icon{
+    display: flex;
+}

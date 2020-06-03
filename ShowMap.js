@@ -53,3 +53,6 @@ function getMap(currentLat, currentLon){
 }
 
 init();
+
+const pos = document.querySelector(".current");
+pos.addEventListener("click", init);
