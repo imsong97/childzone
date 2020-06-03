@@ -5,7 +5,7 @@ const address = document.querySelector(".searchInput");
 navigator.geolocation.getCurrentPosition(function(position) { 
     const currentLat = position.coords.latitude, // 위도
     currentLon = position.coords.longitude; // 경도
-    getMap(currentLat, currentLon);
+    // getMap(currentLat, currentLon);
 });
 
 var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div 
