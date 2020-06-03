@@ -4,7 +4,10 @@ const address = document.querySelector(".searchInput");
 search.addEventListener("click", getAddress);
 
 function getAddress(){
-    var map = new kakao.maps.Map(document.getElementById('map'), {});
+    var map = new kakao.maps.Map(document.getElementById('map'), {
+        center : new kakao.maps.LatLng(33.450701, 126.570667),
+        level : 3
+    });
 
     // 주소-좌표 변환 객체를 생성합니다
     var geocoder = new kakao.maps.services.Geocoder();
