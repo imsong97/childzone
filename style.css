@@ -21,8 +21,6 @@
     border-right: none;
     padding: 5px;
     height: 30px;
-    /* border-radius: 5px 0 0 5px; */
-    outline: none;
 }
 .searchButton {
     width: 40%;
