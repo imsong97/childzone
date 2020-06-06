@@ -67,7 +67,6 @@
     width: 30px;
     height: 27.262px;
 }
-
-.icon{
-    display: flex;
+.fa-crosshairs{
+    color: #00B4CC
 }
