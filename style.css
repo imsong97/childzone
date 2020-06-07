@@ -13,6 +13,7 @@
     border-radius: 5px 5px 5px 5px;
     cursor: pointer;
     font-size: 20px;
+    position: relative;
 }
 .searchInput {
     width: 100%;
@@ -69,5 +70,6 @@
 }
 .fa-crosshairs{
     color: black;
-    position: relative;
+    width: 100%;
+    margin: 0 auto;
 }
